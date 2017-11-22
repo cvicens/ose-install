@@ -178,7 +178,7 @@ openshift_release=v3.6
 #openshift_additional_repos=[{'id': 'ose-devel', 'name': 'ose-devel', 'baseurl': 'http://example.com/puddle/build/AtomicOpenShift/3.1/latest/RH7-RHOSE-3.0/$basearch/os', 'enabled': 1, 'gpgcheck': 0}]
 
 # htpasswd auth
-openshift_master_identity_providers=[{'name': 'htpasswd_auth', 'login': 'true', 'challenge': 'true', 'kind': 'HTPasswdPasswordIdentityProvider', 'filename': '/etc/origin/master/htpasswd'}]
+openshift_master_identity_providers=[{'name': 'Local Auth', 'login': 'true', 'challenge': 'true', 'kind': 'HTPasswdPasswordIdentityProvider', 'filename': '/etc/origin/master/htpasswd'}]
 # Defining htpasswd users
 #openshift_master_htpasswd_users={'user1': '<pre-hashed password>', 'user2': '<pre-hashed password>'}
 # or
@@ -188,7 +188,7 @@ openshift_master_htpasswd_file=/root/htpasswd.openshift
 #openshift_master_identity_providers=[{'name': 'allow_all', 'login': 'true', 'challenge': 'true', 'kind': 'AllowAllPasswordIdentityProvider'}]
 
 # LDAP auth
-openshift_master_identity_providers=[{'name': 'my_ldap_provider', 'challenge': 'true', 'login': 'true', 'kind': 'LDAPPasswordIdentityProvider', 'attributes': {'id': ['dn'], 'email': ['mail'], 'name': ['cn'], 'preferredUsername': ['uid']}, 'bindDN': '', 'bindPassword': '', 'ca': 'my-ldap-ca.crt', 'insecure': 'false', 'url': 'ldaps://ipa.shared.example.opentlc.com:636/cn=users,cn=accounts,dc=shared,dc=example,dc=opentlc,dc=com?uid?sub?(memberOf=cn=ocp-users,cn=groups,cn=accounts,dc=shared,dc=example,dc=opentlc,dc=com)'}]
+openshift_master_identity_providers=[{'name': 'IPA Auth', 'challenge': 'true', 'login': 'true', 'kind': 'LDAPPasswordIdentityProvider', 'attributes': {'id': ['dn'], 'email': ['mail'], 'name': ['cn'], 'preferredUsername': ['uid']}, 'bindDN': '', 'bindPassword': '', 'ca': '/etc/origin/master/ipa-ca.crt', 'insecure': 'false', 'url': 'ldaps://ipa.shared.example.opentlc.com:636/cn=users,cn=accounts,dc=shared,dc=example,dc=opentlc,dc=com?uid?sub?(memberOf=cn=ocp-users,cn=groups,cn=accounts,dc=shared,dc=example,dc=opentlc,dc=com)'}]
 #
 # Configure LDAP CA certificate
 # Specify either the ASCII contents of the certificate or the path to
@@ -199,7 +199,7 @@ openshift_master_identity_providers=[{'name': 'my_ldap_provider', 'challenge': '
 #
 #openshift_master_ldap_ca=<ca text>
 # or
-openshift_master_ldap_ca_file=/etc/origin/master/ipa-ca.crt
+#openshift_master_ldap_ca_file=/etc/origin/master/ipa-ca.crt
 
 # OpenID auth
 #openshift_master_identity_providers=[{"name": "openid_auth", "login": "true", "challenge": "false", "kind": "OpenIDIdentityProvider", "client_id": "my_client_id", "client_secret": "my_client_secret", "claims": {"id": ["sub"], "preferredUsername": ["preferred_username"], "name": ["name"], "email": ["email"]}, "urls": {"authorize": "https://myidp.example.com/oauth2/authorize", "token": "https://myidp.example.com/oauth2/token"}, "ca": "my-openid-ca-bundle.crt"}]
