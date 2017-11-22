@@ -1,4 +1,5 @@
 #!/bin/bash
+
 oc adm policy add-role-to-group admin portalapp -n portalapp-dev
 oc adm policy add-role-to-group admin portalapp -n portalapp-test
 oc adm policy add-role-to-group admin paymentapp -n portalapp-dev
