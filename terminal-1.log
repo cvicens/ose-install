@@ -1,0 +1,427 @@
+Last login: Mon Nov 20 07:08:32 on ttys004
+cvicensa-mbp:opentlc cvicensa$ ls
+cvicensa-redhat.com.id_rsa	cvicensa-redhat.com.id_rsa.pub
+cvicensa-mbp:opentlc cvicensa$ vi hosts.ose.example
+cvicensa-mbp:opentlc cvicensa$ ls
+cvicensa-redhat.com.id_rsa	cvicensa-redhat.com.id_rsa.pub	hosts.ose.example
+cvicensa-mbp:opentlc cvicensa$ 
+cvicensa-mbp:opentlc cvicensa$ 
+cvicensa-mbp:opentlc cvicensa$ 
+cvicensa-mbp:opentlc cvicensa$ ls
+cvicensa-redhat.com.id_rsa	cvicensa-redhat.com.id_rsa.pub	hosts.ose.example
+cvicensa-mbp:opentlc cvicensa$ code .
+cvicensa-mbp:opentlc cvicensa$ cat /usr/share/doc/openshift-ansible-docs-3.6.173.0.48/docs/example-inventories/hosts.ose.example
+cat: /usr/share/doc/openshift-ansible-docs-3.6.173.0.48/docs/example-inventories/hosts.ose.example: No such file or directory
+cvicensa-mbp:opentlc cvicensa$ ls
+bastion.hosts			create-pvs.sh			cvicensa-redhat.com.id_rsa.pub	hosts.ose.example
+create-pv.yml			cvicensa-redhat.com.id_rsa	etc-ansible.hosts
+cvicensa-mbp:opentlc cvicensa$ ls
+bastion.hosts			create-pvs.sh			cvicensa-redhat.com.id_rsa.pub	hosts.ose.example
+create-pv.yml			cvicensa-redhat.com.id_rsa	etc-ansible.hosts
+cvicensa-mbp:opentlc cvicensa$ echo "# ose-install" >> README.md
+cvicensa-mbp:opentlc cvicensa$ git init
+Initialized empty Git repository in /Users/cvicensa/Projects/openshift/opentlc/.git/
+cvicensa-mbp:opentlc cvicensa$ git add README.md
+cvicensa-mbp:opentlc cvicensa$ git commit -m "first commit"
+[master (root-commit) 676853a] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+cvicensa-mbp:opentlc cvicensa$ git remote add origin git@github.com:cvicens/ose-install.git
+cvicensa-mbp:opentlc cvicensa$ git push -u origin master
+X11 forwarding request failed on channel 0
+Counting objects: 3, done.
+Writing objects: 100% (3/3), 233 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To github.com:cvicens/ose-install.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+cvicensa-mbp:opentlc cvicensa$ git add bastion.hosts 
+cvicensa-mbp:opentlc cvicensa$ git commit -m "first commit"
+[master 0ac7838] first commit
+ 1 file changed, 977 insertions(+)
+ create mode 100644 bastion.hosts
+cvicensa-mbp:opentlc cvicensa$ git push -u origin master
+X11 forwarding request failed on channel 0
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 13.24 KiB | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To github.com:cvicens/ose-install.git
+   676853a..0ac7838  master -> master
+Branch master set up to track remote branch master from origin.
+cvicensa-mbp:opentlc cvicensa$ git add create-pv
+create-pv.yml  create-pvs.sh  
+cvicensa-mbp:opentlc cvicensa$ git add create-pvs.sh 
+cvicensa-mbp:opentlc cvicensa$ git commit -m "first commit"
+[master 53f78cd] first commit
+ 1 file changed, 45 insertions(+)
+ create mode 100644 create-pvs.sh
+cvicensa-mbp:opentlc cvicensa$ git push -u origin master
+X11 forwarding request failed on channel 0
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 620 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To github.com:cvicens/ose-install.git
+   0ac7838..53f78cd  master -> master
+Branch master set up to track remote branch master from origin.
+cvicensa-mbp:opentlc cvicensa$ git add hosts.ose.example 
+cvicensa-mbp:opentlc cvicensa$ git add etc-ansible.hosts 
+cvicensa-mbp:opentlc cvicensa$ git commit -m "first commit"
+[master ac7a2ae] first commit
+ 2 files changed, 991 insertions(+)
+ create mode 100644 etc-ansible.hosts
+ create mode 100644 hosts.ose.example
+cvicensa-mbp:opentlc cvicensa$ git push -u origin master
+X11 forwarding request failed on channel 0
+Counting objects: 4, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 13.45 KiB | 0 bytes/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+To github.com:cvicens/ose-install.git
+   53f78cd..ac7a2ae  master -> master
+Branch master set up to track remote branch master from origin.
+cvicensa-mbp:opentlc cvicensa$ git commit -m "first commit"
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+	modified:   README.md
+
+Untracked files:
+	cvicensa-redhat.com.id_rsa
+	cvicensa-redhat.com.id_rsa.pub
+
+no changes added to commit
+cvicensa-mbp:opentlc cvicensa$ git push -u origin master
+X11 forwarding request failed on channel 0
+Branch master set up to track remote branch master from origin.
+Everything up-to-date
+cvicensa-mbp:opentlc cvicensa$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   README.md
+	modified:   bastion.hosts
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	cvicensa-redhat.com.id_rsa
+	cvicensa-redhat.com.id_rsa.pub
+
+no changes added to commit (use "git add" and/or "git commit -a")
+cvicensa-mbp:opentlc cvicensa$ git commit -a -m "LDAP changes"
+[master bac0baa] LDAP changes
+ 2 files changed, 6 insertions(+), 2 deletions(-)
+cvicensa-mbp:opentlc cvicensa$ git push -u origin master
+X11 forwarding request failed on channel 0
+Counting objects: 4, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 680 bytes | 0 bytes/s, done.
+Total 4 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:cvicens/ose-install.git
+   ac7a2ae..bac0baa  master -> master
+Branch master set up to track remote branch master from origin.
+cvicensa-mbp:opentlc cvicensa$ git commit -a -m "LDAP changes" : git push origin master
+fatal: Paths with -a does not make sense.
+cvicensa-mbp:opentlc cvicensa$ git commit -a -m "LDAP changes" ; git push origin master
+[master 25f01c5] LDAP changes
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+X11 forwarding request failed on channel 0
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 355 bytes | 0 bytes/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:cvicens/ose-install.git
+   bac0baa..25f01c5  master -> master
+cvicensa-mbp:opentlc cvicensa$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   ldap-config-whitelist.txt
+	new file:   ldap-config.yaml
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   bastion.hosts
+	modified:   ldap-config.yaml
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	cvicensa-redhat.com.id_rsa
+	cvicensa-redhat.com.id_rsa.pub
+
+cvicensa-mbp:opentlc cvicensa$ git commit -a -m "LDAP changes" ; git push origin master
+[master d47fe51] LDAP changes
+ 3 files changed, 36 insertions(+), 1 deletion(-)
+ create mode 100644 ldap-config-whitelist.txt
+ create mode 100644 ldap-config.yaml
+X11 forwarding request failed on channel 0
+Counting objects: 5, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 1007 bytes | 0 bytes/s, done.
+Total 5 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:cvicens/ose-install.git
+   25f01c5..d47fe51  master -> master
+cvicensa-mbp:opentlc cvicensa$ ls
+README.md			create-pvs.sh			cvicensa-redhat.com.id_rsa.pub	hosts.ose.example		ldap-config.yaml
+bastion.hosts			cvicensa-redhat.com.id_rsa	etc-ansible.hosts		ldap-config-whitelist.txt
+cvicensa-mbp:opentlc cvicensa$ git commit -a -m "LDAP changes" ; git push origin master
+[master 9dbefa1] LDAP changes
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+X11 forwarding request failed on channel 0
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 321 bytes | 0 bytes/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:cvicens/ose-install.git
+   d47fe51..9dbefa1  master -> master
+cvicensa-mbp:opentlc cvicensa$ git commit -a -m "LDAP changes" ; git push origin master
+[master b870f7e] LDAP changes
+ 1 file changed, 1 insertion(+)
+X11 forwarding request failed on channel 0
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 332 bytes | 0 bytes/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:cvicens/ose-install.git
+   9dbefa1..b870f7e  master -> master
+cvicensa-mbp:opentlc cvicensa$ git commit -a -m "LDAP changes" ; git push origin master
+[master c4ac1cc] LDAP changes
+ 1 file changed, 12 insertions(+), 1 deletion(-)
+X11 forwarding request failed on channel 0
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 463 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:cvicens/ose-install.git
+   b870f7e..c4ac1cc  master -> master
+cvicensa-mbp:opentlc cvicensa$ git add set-roles.sh 
+cvicensa-mbp:opentlc cvicensa$ git commit -a -m "Adding script to set roles for lab 4" ; git push origin master
+[master 4f338fe] Adding script to set roles for lab 4
+ 1 file changed, 5 insertions(+)
+ create mode 100644 set-roles.sh
+X11 forwarding request failed on channel 0
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 417 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:cvicens/ose-install.git
+   c4ac1cc..4f338fe  master -> master
+cvicensa-mbp:opentlc cvicensa$ git commit -a -m "Adding script to set roles for lab 4" ; git push origin master
+[master 40c25da] Adding script to set roles for lab 4
+ 1 file changed, 6 insertions(+), 3 deletions(-)
+X11 forwarding request failed on channel 0
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 341 bytes | 0 bytes/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:cvicens/ose-install.git
+   4f338fe..40c25da  master -> master
+cvicensa-mbp:opentlc cvicensa$ git add create-p
+create-projects.sh  create-pvs.sh       
+cvicensa-mbp:opentlc cvicensa$ git add create-projects.sh 
+cvicensa-mbp:opentlc cvicensa$ git commit -a -m "Adding script to set roles for lab 4" ; git push origin master
+[master 14e7d07] Adding script to set roles for lab 4
+ 2 files changed, 14 insertions(+)
+ create mode 100644 create-projects.sh
+X11 forwarding request failed on channel 0
+Counting objects: 4, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 532 bytes | 0 bytes/s, done.
+Total 4 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:cvicens/ose-install.git
+   40c25da..14e7d07  master -> master
+cvicensa-mbp:opentlc cvicensa$ git commit -a -m "Adding script to set roles for lab 4" ; git push origin master
+[master bdb3b5d] Adding script to set roles for lab 4
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+X11 forwarding request failed on channel 0
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 323 bytes | 0 bytes/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:cvicens/ose-install.git
+   14e7d07..bdb3b5d  master -> master
+cvicensa-mbp:opentlc cvicensa$ git commit -a -m "Adding script to set roles for lab 4" ; git push origin master
+[master 15ddb3a] Adding script to set roles for lab 4
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+X11 forwarding request failed on channel 0
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 360 bytes | 0 bytes/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:cvicens/ose-install.git
+   bdb3b5d..15ddb3a  master -> master
+cvicensa-mbp:opentlc cvicensa$ git commit -a -m "Adding script to set roles for lab 4" ; git push origin master
+[master 0c9f39a] Adding script to set roles for lab 4
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+X11 forwarding request failed on channel 0
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 326 bytes | 0 bytes/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:cvicens/ose-install.git
+   15ddb3a..0c9f39a  master -> master
+cvicensa-mbp:opentlc cvicensa$ git commit -a -m "Adding script to set roles for lab 4" ; git push origin master
+[master e5ad945] Adding script to set roles for lab 4
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+X11 forwarding request failed on channel 0
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 322 bytes | 0 bytes/s, done.
+Total 3 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:cvicens/ose-install.git
+   0c9f39a..e5ad945  master -> master
+cvicensa-mbp:opentlc cvicensa$ clear
+
+cvicensa-mbp:opentlc cvicensa$ pwd
+/Users/cvicensa/Projects/openshift/opentlc
+cvicensa-mbp:opentlc cvicensa$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+cvicensa-mbp:opentlc cvicensa$ sudo vi /etc/hosts
+Password:
+(reverse-i-search)`sudo ': sudo vi /etc/hosts
+cvicensa-mbp:opentlc cvicensa$ sudo ifconfig en0 alias 192.168.50.100 255.255.255.0
+Password:
+cvicensa-mbp:opentlc cvicensa$ ifconfig en0
+en0: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+	ether f4:5c:89:bf:86:3f 
+	inet6 fe80::4e:fc53:881d:e965%en0 prefixlen 64 secured scopeid 0x4 
+	inet 192.168.1.139 netmask 0xffffff00 broadcast 192.168.1.255
+	inet 192.168.50.100 netmask 0xffffff00 broadcast 255.255.255.0
+	nd6 options=201<PERFORMNUD,DAD>
+	media: autoselect
+	status: active
+cvicensa-mbp:opentlc cvicensa$ ls /etc/resolv
+resolv.conf  resolver/    
+cvicensa-mbp:opentlc cvicensa$ ls /etc/resolver/
+192.168.1.136.nip.io	192.168.1.139.nip.io	192.168.50.100.nip.io	192.168.60.120.nip.io	dev
+cvicensa-mbp:opentlc cvicensa$ git commit -a -m "LDAP changes" ; git push origin master
+cvicensa-mbp:opentlc cvicensa$ brew list dnsmasq
+/usr/local/Cellar/dnsmasq/2.78/.bottle/etc/dnsmasq.conf
+/usr/local/Cellar/dnsmasq/2.78/homebrew.mxcl.dnsmasq.plist
+/usr/local/Cellar/dnsmasq/2.78/sbin/dnsmasq
+/usr/local/Cellar/dnsmasq/2.78/share/man/man8/dnsmasq.8
+cvicensa-mbp:opentlc cvicensa$ code /usr/local/Cellar/dnsmasq/2.78/.bottle/etc/dnsmasq.conf
+
+cvicensa-mbp:opentlc cvicensa$ 
+cvicensa-mbp:opentlc cvicensa$ code /usr/local/Cellar/dnsmasq/2.78/.bottle/etc/dnsmasq.conf
+cvicensa-mbp:opentlc cvicensa$ code //usr/local/share/
+ImageMagick-7/                        bash-completion/                      glib-2.0/                             python/                               tmux/
+Red Hat IS CA.pem                     cert.red_hat_root_certs.mobileconfig  info/                                 qemu/                                 vim/
+Shadowman.icns                        certbot/                              libtool/                              remove_vpn_menu.png                   zsh/
+aclocal/                              doc/                                  locale/                               systemtap/                            
+augeas/                               gdb/                                  man/                                  tessdata/                             
+cvicensa-mbp:opentlc cvicensa$ code /usr/local/etc/dnsmasq.conf 
+cvicensa-mbp:opentlc cvicensa$ oc cluster status
+Error: OpenShift cluster is not running
+cvicensa-mbp:opentlc cvicensa$ oc-cluster list
+# Using client for origin v3.6.0
+Profiles:
+- cicd
+- devops-guides
+- mcp-standalone
+- rhmap4.4
+cvicensa-mbp:opentlc cvicensa$ oc-cluster up rhmap4.4
+# Using client for origin v3.6.0
+[INFO] Created self signed certs. You can avoid self signed certificates warnings by trusting this certificate: /Users/cvicensa/.oc/certs/master.server.crt
+[INFO] Running a previously created cluster
+oc cluster up --version v3.6.0 --image openshift/origin --public-hostname 192.168.50.100 --routing-suffix apps.192.168.50.100.nip.io --host-data-dir /Users/cvicensa/.oc/profiles/rhmap4.4/data --host-config-dir /Users/cvicensa/.oc/profiles/rhmap4.4/config --host-pv-dir /Users/cvicensa/.oc/profiles/rhmap4.4/pv --use-existing-config -e TZ=CET
+Starting OpenShift using openshift/origin:v3.6.0 ...
+OpenShift server started.
+
+The server is accessible via web console at:
+    https://192.168.50.100:8443
+
+Switched to context "rhmap4.4".
+cvicensa-mbp:opentlc cvicensa$ 

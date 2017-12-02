@@ -1,0 +1,115 @@
+      kind: LDAPPasswordIdentityProvider
+      url: ldaps://ipa.shared.example.opentlc.com:636/cn=users,cn=accounts,dc=shared,dc=example,dc=opentlc,dc=com?uid?sub?(memberOf=cn=ocp-users,cn=groups,cn=accounts,dc=shared,dc=example,dc=opentlc,dc=com)
+  masterCA: ca-bundle.crt
+  masterPublicURL: https://loadbalancer.72c4.example.opentlc.com:8443
+  masterURL: https://loadbalancer1.72c4.internal:8443
+  sessionConfig:
+    sessionMaxAgeSeconds: 3600
+    sessionName: ssn
+    sessionSecretsFile: /etc/origin/master/session-secrets.yaml
+  tokenConfig:
+    accessTokenMaxAgeSeconds: 86400
+    authorizeTokenMaxAgeSeconds: 500
+pauseControllers: false
+policyConfig:
+  bootstrapPolicyFile: /etc/origin/master/policy.json
+  openshiftInfrastructureNamespace: openshift-infra
+  openshiftSharedResourcesNamespace: openshift
+projectConfig:
+  defaultNodeSelector: ""
+  projectRequestMessage: ""
+  projectRequestTemplate: ""
+  securityAllocator:
+    mcsAllocatorRange: s0:/2
+    mcsLabelsPerProject: 5
+    uidAllocatorRange: 1000000000-1999999999/10000
+routingConfig:
+  subdomain: apps.72c4.example.opentlc.com
+serviceAccountConfig:
+  limitSecretReferences: false
+  managedNames:
+  - default
+  - builder
+  - deployer
+  masterCA: ca-bundle.crt
+  privateKeyFile: serviceaccounts.private.key
+  publicKeyFiles:
+  - serviceaccounts.public.key
+servingInfo:
+  bindAddress: 0.0.0.0:8443
+  bindNetwork: tcp4
+  certFile: master.server.crt
+  clientCA: ca-bundle.crt
+  keyFile: master.server.key
+  maxRequestsInFlight: 500
+  requestTimeoutSeconds: 3600
+volumeConfig:
+  dynamicProvisioningEnabled: true
+[root@master1 ~]# vim /etc/origin/master/master-config.yaml
+[root@master1 ~]# vim /etc/origin/master/master-config.yaml
+[root@master1 ~]# packet_write_wait: Connection to 18.195.72.18 port 22: Broken pipe
+cvicensa-mbp:opentlc cvicensa$ ssh -i cvicensa-redhat.com.id_rsa  cvicensa-redhat.com@bastion.72c4.example.opentlc.com
+X11 forwarding request failed on channel 0
+Last login: Wed Nov 22 11:07:55 2017 from 149.6.131.75
+[cvicensa-redhat.com@bastion ~]$ sudo su -
+Last login: Thu Nov 23 09:16:15 EST 2017 on pts/1
+[root@bastion ~]# clear
+
+[root@bastion ~]# 
+[root@bastion ~]# 
+[root@bastion ~]# 
+[root@bastion ~]# packet_write_wait: Connection to 18.195.72.18 port 22: Broken pipe
+cvicensa-mbp:opentlc cvicensa$ ssh -i cvicensa-redhat.com.id_rsa  cvicensa-redhat.com@bastion.72c4.example.opentlc.com
+ssh: connect to host bastion.72c4.example.opentlc.com port 22: Operation timed out
+(reverse-i-search)`ssh ': ssh -i cvicensa-redhat.com.id_rsa $OPENTLC_USER@ocplab-${GUID}.oslab.opentlc.com
+cvicensa-mbp:opentlc cvicensa$ ssh -i cvicensa-redhat.com.id_rsa  cvicensa-redhat.com@bastion.72c4.example.opentlc.com
+ssh: connect to host bastion.72c4.example.opentlc.com port 22: Operation timed out
+cvicensa-mbp:opentlc cvicensa$ 
+cvicensa-mbp:opentlc cvicensa$ 
+cvicensa-mbp:opentlc cvicensa$ 
+cvicensa-mbp:opentlc cvicensa$ 
+cvicensa-mbp:opentlc cvicensa$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

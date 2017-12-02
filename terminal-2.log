@@ -1,0 +1,116 @@
+    persistentvolumeclaim "grafana-log-pvc" created
+    configmap "grafana" created
+--> Success
+    Run 'oc status' to view your app.
+[root@master1 openshift-prometheus]# oc get route grafana
+NAME      HOST/PORT                                          PATH      SERVICES   PORT      TERMINATION   WILDCARD
+grafana   grafana-prometheus.apps.72c4.example.opentlc.com             grafana    <all>                   None
+[root@master1 openshift-prometheus]# packet_write_wait: Connection to 18.195.72.18 port 22: Broken pipe
+cvicensa-mbp:opentlc cvicensa$ 
+cvicensa-mbp:opentlc cvicensa$ 
+cvicensa-mbp:opentlc cvicensa$ 
+cvicensa-mbp:opentlc cvicensa$ 
+cvicensa-mbp:opentlc cvicensa$ 
+cvicensa-mbp:opentlc cvicensa$ 
+cvicensa-mbp:opentlc cvicensa$ 
+cvicensa-mbp:opentlc cvicensa$ 
+cvicensa-mbp:opentlc cvicensa$ ssh -i cvicensa-redhat.com.id_rsa cvicensa-redhat.com@bastion.72c4.example.opentlc.com
+ssh: connect to host bastion.72c4.example.opentlc.com port 22: Operation timed out
+cvicensa-mbp:opentlc cvicensa$ ls
+README.md			create-projects.sh		cvicensa-redhat.com.id_rsa	etc-ansible.hosts		infra-hosts-prometheus		ldap-config.yaml
+bastion.hosts			create-pvs.sh			cvicensa-redhat.com.id_rsa.pub	hosts.ose.example		ldap-config-whitelist.txt	set-roles.sh
+cvicensa-mbp:opentlc cvicensa$ cat create-projects.sh 
+#!/bin/bash
+
+export APPNAME=portalapp
+export APPTEXT="Portal App"
+oadm new-project ${APPNAME}-dev --display-name="${APPTEXT} Development"
+oadm new-project ${APPNAME}-test --display-name="${APPTEXT} Testing"
+oadm new-project ${APPNAME}-prod --display-name="${APPTEXT} Production"
+
+export APPNAME=paymentapp
+export APPTEXT="Payment App"
+oadm new-project ${APPNAME}-dev --display-name="${APPTEXT} Development"
+oadm new-project ${APPNAME}-test --display-name="${APPTEXT} Testing"
+oadm new-project ${APPNAME}-prod --display-name="${APPTEXT} Production"cvicensa-mbp:opentlc cvicensa$ 
+cvicensa-mbp:opentlc cvicensa$ 
+cvicensa-mbp:opentlc cvicensa$ 
+cvicensa-mbp:opentlc cvicensa$ 
+cvicensa-mbp:opentlc cvicensa$ pwd
+/Users/cvicensa/Projects/openshift/opentlc
+cvicensa-mbp:opentlc cvicensa$ ls
+README.md			create-projects.sh		cvicensa-redhat.com.id_rsa	etc-ansible.hosts		infra-hosts-prometheus		ldap-config.yaml
+bastion.hosts			create-pvs.sh			cvicensa-redhat.com.id_rsa.pub	hosts.ose.example		ldap-config-whitelist.txt	set-roles.sh
+cvicensa-mbp:opentlc cvicensa$ ssh -i cvicensa-redhat.com.id_rsa cvicensa-redhat.com@bastion.72c4.example.opentlc.com
+ssh: connect to host bastion.72c4.example.opentlc.com port 22: Operation timed out
+cvicensa-mbp:opentlc cvicensa$ ssh -i cvicensa-redhat.com.id_rsa cvicensa-redhat.com@bastion.72c4.example.opentlc.com
+^[[Ossh: connect to host bastion.72c4.example.opentlc.com port 22: Connection refused
+cvicensa-mbp:opentlc cvicensa$ ssh -i cvicensa-redhat.com.id_rsa cvicensa-redhat.com@bastion.72c4.example.opentlc.com
+^[[OX11 forwarding request failed on channel 0
+Last login: Thu Nov 23 09:16:06 2017 from 149.6.131.75
+^[[O[cvicensa-redhat.com@bastion ~]$ 
+[cvicensa-redhat.com@bastion ~]$ 
+[cvicensa-redhat.com@bastion ~]$ 
+[cvicensa-redhat.com@bastion ~]$ 
+[cvicensa-redhat.com@bastion ~]$ sudo su -
+Last login: Thu Nov 23 09:16:26 EST 2017 on pts/0
+[root@bastion ~]# clear
+
+[root@bastion ~]# packet_write_wait: Connection to 18.195.72.18 port 22: Broken pipe
+cvicensa-mbp:opentlc cvicensa$ ssh -i cvicensa-redhat.com.id_rsa cvicensa-redhat.com@bastion.72c4.example.opentlc.com
+ssh: Could not resolve hostname bastion.72c4.example.opentlc.com: nodename nor servname provided, or not known
+cvicensa-mbp:opentlc cvicensa$ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
