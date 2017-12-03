@@ -291,8 +291,8 @@ openshift_master_htpasswd_file=/root/htpasswd.openshift
 # or to one or all of the masters defined in the inventory if no load
 # balancer is present.
 openshift_master_cluster_method=native
-openshift_master_cluster_hostname=loadbalancer1.72c4.internal
-openshift_master_cluster_public_hostname=loadbalancer.72c4.example.opentlc.com
+openshift_master_cluster_hostname=loadbalancer1.ad92.internal
+openshift_master_cluster_public_hostname=loadbalancer.ad92.example.opentlc.com
 
 # Pacemaker high availability cluster method.
 # Pacemaker HA environment must be able to self provision the
@@ -315,7 +315,7 @@ openshift_master_cluster_public_hostname=loadbalancer.72c4.example.opentlc.com
 #osm_api_server_args={'max-requests-inflight': ['400']}
 
 # default subdomain to use for exposed routes
-openshift_master_default_subdomain=apps.72c4.example.opentlc.com
+openshift_master_default_subdomain=apps.ad92.example.opentlc.com
 
 # additional cors origins
 #osm_custom_cors_origins=['foo.example.com', 'bar.example.com']
@@ -937,19 +937,19 @@ openshift_master_ca_certificate={'certfile': '/etc/ansible/ca.cert.pem', 'keyfil
 # containerized=true host variable we must set to false.
 [lb]
 #ose3-lb-ansible.test.example.com containerized=false
-loadbalancer1.72c4.internal host_zone=eu-central-1a
+loadbalancer1.ad92.internal host_zone=eu-central-1a
 
 [masters]
 #ose3-master[1:3]-ansible.test.example.com
-master1.72c4.internal host_zone=eu-central-1a
-master2.72c4.internal host_zone=eu-central-1a
-master3.72c4.internal host_zone=eu-central-1a
+master1.ad92.internal host_zone=eu-central-1a
+master2.ad92.internal host_zone=eu-central-1a
+master3.ad92.internal host_zone=eu-central-1a
 
 [etcd]
 #ose3-etcd[1:3]-ansible.test.example.com
-master1.72c4.internal host_zone=eu-central-1a
-master2.72c4.internal host_zone=eu-central-1a
-master3.72c4.internal host_zone=eu-central-1a
+master1.ad92.internal host_zone=eu-central-1a
+master2.ad92.internal host_zone=eu-central-1a
+master3.ad92.internal host_zone=eu-central-1a
 
 
 # NOTE: Currently we require that masters be part of the SDN which requires that they also be nodes
@@ -960,18 +960,18 @@ master3.72c4.internal host_zone=eu-central-1a
 #ose3-node[1:2]-ansible.test.example.com openshift_node_labels="{'region': 'primary', 'zone': 'default'}"
 
 ## These are the masters
-master1.72c4.internal openshift_hostname=master1.72c4.internal ansible_ssh_user=ec2-user ansible_ssh_private_key_file=~/.ssh/ocpkey.pem openshift_node_labels="{'logging':'true','openshift_schedulable':'False','cluster': '72c4', 'zone': 'eu-central-1a'}"
-master2.72c4.internal openshift_hostname=master2.72c4.internal ansible_ssh_user=ec2-user ansible_ssh_private_key_file=~/.ssh/ocpkey.pem openshift_node_labels="{'logging':'true','openshift_schedulable':'False','cluster': '72c4', 'zone': 'eu-central-1a'}"
-master3.72c4.internal openshift_hostname=master3.72c4.internal ansible_ssh_user=ec2-user ansible_ssh_private_key_file=~/.ssh/ocpkey.pem openshift_node_labels="{'logging':'true','openshift_schedulable':'False','cluster': '72c4', 'zone': 'eu-central-1a'}"
+master1.ad92.internal openshift_hostname=master1.ad92.internal ansible_ssh_user=ec2-user ansible_ssh_private_key_file=~/.ssh/ocpkey.pem openshift_node_labels="{'logging':'true','openshift_schedulable':'False','cluster': 'ad92', 'zone': 'eu-central-1a'}"
+master2.ad92.internal openshift_hostname=master2.ad92.internal ansible_ssh_user=ec2-user ansible_ssh_private_key_file=~/.ssh/ocpkey.pem openshift_node_labels="{'logging':'true','openshift_schedulable':'False','cluster': 'ad92', 'zone': 'eu-central-1a'}"
+master3.ad92.internal openshift_hostname=master3.ad92.internal ansible_ssh_user=ec2-user ansible_ssh_private_key_file=~/.ssh/ocpkey.pem openshift_node_labels="{'logging':'true','openshift_schedulable':'False','cluster': 'ad92', 'zone': 'eu-central-1a'}"
 
 ## These are infranodes
-infranode1.72c4.internal openshift_hostname=infranode1.72c4.internal  ansible_ssh_user=ec2-user ansible_ssh_private_key_file=~/.ssh/ocpkey.pem openshift_node_labels="{'logging':'true','cluster': '72c4', 'env':'infra', 'zone': 'eu-central-1a'}"
-infranode2.72c4.internal openshift_hostname=infranode2.72c4.internal  ansible_ssh_user=ec2-user ansible_ssh_private_key_file=~/.ssh/ocpkey.pem openshift_node_labels="{'logging':'true','cluster': '72c4', 'env':'infra', 'zone': 'eu-central-1a'}"
+infranode1.ad92.internal openshift_hostname=infranode1.ad92.internal  ansible_ssh_user=ec2-user ansible_ssh_private_key_file=~/.ssh/ocpkey.pem openshift_node_labels="{'logging':'true','cluster': 'ad92', 'env':'infra', 'zone': 'eu-central-1a'}"
+infranode2.ad92.internal openshift_hostname=infranode2.ad92.internal  ansible_ssh_user=ec2-user ansible_ssh_private_key_file=~/.ssh/ocpkey.pem openshift_node_labels="{'logging':'true','cluster': 'ad92', 'env':'infra', 'zone': 'eu-central-1a'}"
 
 ## These are regular nodes
-node1.72c4.internal openshift_hostname=node1.72c4.internal  ansible_ssh_user=ec2-user ansible_ssh_private_key_file=~/.ssh/ocpkey.pem openshift_node_labels="{'logging':'true','cluster': '72c4', 'env':'app', 'zone': 'eu-central-1a'}"
-node2.72c4.internal openshift_hostname=node2.72c4.internal  ansible_ssh_user=ec2-user ansible_ssh_private_key_file=~/.ssh/ocpkey.pem openshift_node_labels="{'logging':'true','cluster': '72c4', 'env':'app', 'zone': 'eu-central-1a'}"
-node3.72c4.internal openshift_hostname=node3.72c4.internal  ansible_ssh_user=ec2-user ansible_ssh_private_key_file=~/.ssh/ocpkey.pem openshift_node_labels="{'logging':'true','cluster': '72c4', 'env':'app', 'zone': 'eu-central-1a'}"
+node1.ad92.internal openshift_hostname=node1.ad92.internal  ansible_ssh_user=ec2-user ansible_ssh_private_key_file=~/.ssh/ocpkey.pem openshift_node_labels="{'logging':'true','cluster': 'ad92', 'env':'app', 'zone': 'eu-central-1a'}"
+node2.ad92.internal openshift_hostname=node2.ad92.internal  ansible_ssh_user=ec2-user ansible_ssh_private_key_file=~/.ssh/ocpkey.pem openshift_node_labels="{'logging':'true','cluster': 'ad92', 'env':'app', 'zone': 'eu-central-1a'}"
+node3.ad92.internal openshift_hostname=node3.ad92.internal  ansible_ssh_user=ec2-user ansible_ssh_private_key_file=~/.ssh/ocpkey.pem openshift_node_labels="{'logging':'true','cluster': 'ad92', 'env':'app', 'zone': 'eu-central-1a'}"
 
 [nfs]
-support1.72c4.internal openshift_hostname=support1.72c4.internal  ansible_ssh_user=ec2-user ansible_ssh_private_key_file=~/.ssh/ocpkey.pem
+support1.ad92.internal openshift_hostname=support1.ad92.internal  ansible_ssh_user=ec2-user ansible_ssh_private_key_file=~/.ssh/ocpkey.pem
