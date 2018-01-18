@@ -35,7 +35,7 @@ debug_level=2
 openshift_deployment_type=openshift-enterprise
 
 # Specify the generic release of OpenShift to install
-openshift_release=v3.7
+openshift_release=v3.6
 
 # Specify an exact container image tag to install or configure.
 #openshift_image_tag=v3.6.0
