@@ -1,6 +1,6 @@
 #!/bin/sh
 
-NFS_SERVER=node6.example.com
+NFS_SERVER=support1.0cbe.internal
 NFS_ROOT_PATH=/srv/nfs/user-vols
 
 for i in `seq 1 50`;
