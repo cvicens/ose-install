@@ -35,13 +35,13 @@ debug_level=2
 openshift_deployment_type=openshift-enterprise
 
 # Specify the generic release of OpenShift to install
-openshift_release=v3.6
+openshift_release=v3.7
 
 # Specify an exact container image tag to install or configure.
-#openshift_image_tag=v3.6.0
+#openshift_image_tag=v3.7.0
 
 # Specify an exact rpm version to install or configure.
-#openshift_pkg_version=-3.6.0
+#openshift_pkg_version=-3.7.0
 
 # Skip upgrading Docker during an OpenShift upgrade, leaves the current Docker version alone.
 # docker_upgrade=False
